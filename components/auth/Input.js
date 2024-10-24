@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderBottomColor: GlobalStyles.colors.gray800,
     borderRadius: 4,
-    height: 32,
+    minHeight: 32,
     paddingHorizontal: 4,
   },
   invalidInput: {
@@ -47,5 +47,8 @@ const styles = StyleSheet.create({
   },
   invalidLabel: {
     color: GlobalStyles.colors.error800,
+  },
+  multilineInput: {
+    height: 100,
   },
 });

@@ -61,7 +61,7 @@ export const updateMe = async (data, jwt) => {
   try {
     const response = await axiosInstance({
       method: "PATCH",
-      url: "users/me",
+      url: "users/updateMe",
       data,
       headers: {
         authorization: `Bearer ${jwt}`,
@@ -92,6 +92,99 @@ export const resetPassword = async (data) => {
       method: "POST",
       url: "users/resetPassword",
       data,
+    });
+    return response.data;
+  } catch (error) {
+    return error.response.data;
+  }
+};
+
+export const updatePassword = async (data, jwt) => {
+  try {
+    const response = await axiosInstance({
+      method: "PATCH",
+      url: `users/updatePassword`,
+      data,
+      headers: {
+        authorization: `Bearer ${jwt}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    return error.response.data;
+  }
+};
+
+export const getAllExpenses = async (jwt) => {
+  try {
+    const response = await axiosInstance({
+      method: "GET",
+      url: "expenses/getAllExpenses",
+      headers: {
+        authorization: `Bearer ${jwt}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    return error.response.data;
+  }
+};
+
+export const createExpense = async (data, jwt) => {
+  try {
+    const response = await axiosInstance({
+      method: "POST",
+      url: "expenses/createExpense",
+      data,
+      headers: {
+        authorization: `Bearer ${jwt}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    return error.response.data;
+  }
+};
+
+export const getOneExpense = async (id, jwt) => {
+  try {
+    const response = await axiosInstance({
+      method: "GET",
+      url: `expenses/getOneExpense/${id}`,
+      headers: {
+        authorization: `Bearer ${jwt}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    return error.response.data;
+  }
+};
+
+export const deleteExpense = async (id, jwt) => {
+  try {
+    const response = await axiosInstance({
+      method: "DELETE",
+      url: `expenses/deleteExpense/${id}`,
+      headers: {
+        authorization: `Bearer ${jwt}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    return error.response.data;
+  }
+};
+
+export const updateExpense = async (data, id, jwt) => {
+  try {
+    const response = await axiosInstance({
+      method: "PATCH",
+      url: `expenses/updateExpense/${id}`,
+      data,
+      headers: {
+        authorization: `Bearer ${jwt}`,
+      },
     });
     return response.data;
   } catch (error) {

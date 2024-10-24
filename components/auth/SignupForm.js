@@ -29,7 +29,6 @@ function SignupForm() {
     hasError: firstNameInputIsInvalid,
     valueInputChangedHandler: firstNameInputChangedHandler,
     valueInputBlurHandler: firstNameInputBlurHandler,
-    reset: firstNameInputReset,
   } = useInput((value) => value.trim() !== "");
 
   const {
@@ -38,7 +37,6 @@ function SignupForm() {
     hasError: lastNameInputIsInvalid,
     valueInputChangedHandler: lastNameInputChangedHandler,
     valueInputBlurHandler: lastNameInputBlurHandler,
-    reset: lastNameInputReset,
   } = useInput((value) => value.trim() !== "");
 
   const {
@@ -47,7 +45,6 @@ function SignupForm() {
     hasError: emailInputIsInvalid,
     valueInputChangedHandler: emailInputChangedHandler,
     valueInputBlurHandler: emailInputBlurHandler,
-    reset: emailInputReset,
   } = useInput((value) => value.trim().includes("@"));
 
   const {
@@ -56,7 +53,6 @@ function SignupForm() {
     hasError: passwordInputIsInvalid,
     valueInputChangedHandler: passwordInputChangedHandler,
     valueInputBlurHandler: passwordInputBlurHandler,
-    reset: passwordInputReset,
   } = useInput((value) => value.trim() !== "");
 
   const {
@@ -65,7 +61,6 @@ function SignupForm() {
     hasError: passwordConfirmInputIsInvalid,
     valueInputChangedHandler: passwordConfirmInputChangedHandler,
     valueInputBlurHandler: passwordConfirmInputBlurHandler,
-    reset: passwordConfirmInputReset,
   } = useInput((value) => value.trim() !== "");
 
   let formIsValid = false;
