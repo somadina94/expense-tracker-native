@@ -1,7 +1,7 @@
 import { Pressable, View, Text, StyleSheet } from "react-native";
 import GlobalStyles from "../../util/GlobalStyles";
 
-function Button({ size, title, onPress, disabled, outline }) {
+function Button({ size, title, onPress, disabled, outline, danger }) {
   return (
     <Pressable
       onPress={onPress}
@@ -11,6 +11,7 @@ function Button({ size, title, onPress, disabled, outline }) {
         outline && styles.outline,
         !outline && styles.solid,
         disabled && styles.disabled,
+        danger && styles.danger,
       ]}
       disabled={disabled}
     >
@@ -50,5 +51,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     backgroundColor: GlobalStyles.colors.primary800,
     borderColor: GlobalStyles.colors.primary800,
+  },
+  danger: {
+    backgroundColor: GlobalStyles.colors.error800,
   },
 });

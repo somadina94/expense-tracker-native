@@ -3,6 +3,7 @@ import GlobalStyles from "../util/GlobalStyles";
 
 import Button from "../components/buttons/Button";
 import LinkButton from "../components/buttons/LinkButton";
+import Icon from "../components/icon/Icon";
 
 function Welcome({ navigation }) {
   return (
@@ -17,20 +18,26 @@ function Welcome({ navigation }) {
           Manage, track, and save smarter with just a few taps.
         </Text>
         <View style={styles.actions}>
-          <Button
+          <Icon
+            name="person-add-outline"
             title="SIGN UP"
-            size="small"
+            size={48}
+            color={GlobalStyles.colors.white900}
             onPress={() => navigation.navigate("Signup")}
           />
-          <Button
+          <Icon
+            name="power-outline"
             title="LOGIN"
-            size="small"
+            size={48}
+            color="green"
             onPress={() => navigation.navigate("Login")}
           />
         </View>
-        <LinkButton onPress={() => navigation.navigate("Privacy")}>
-          Privacy Policy
-        </LinkButton>
+        <View style={styles.privacy}>
+          <LinkButton onPress={() => navigation.navigate("Privacy")}>
+            Privacy Policy
+          </LinkButton>
+        </View>
       </View>
     </ImageBackground>
   );
@@ -55,7 +62,15 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
   },
   actions: {
-    margin: 32,
+    margin: 12,
     gap: 24,
+    flexDirection: "row",
+    justifyContent: "space-around",
+    padding: 12,
+    backgroundColor: GlobalStyles.colors.primary800,
+    borderRadius: 12,
+  },
+  privacy: {
+    marginBottom: 24,
   },
 });
