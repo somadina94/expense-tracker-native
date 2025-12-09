@@ -1,27 +1,37 @@
 {
-  "expo": {
-    "name": "mobile",
-    "slug": "mobile",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+  "android": {
+    "adaptiveIcon": {
+      "backgroundColor": "#ffffff",
+      "foregroundImage": "./assets/adaptive-icon.png"
     },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "package": "com.jahbyte.extrack",
+    "versionCode": 3
+  },
+  "extra": {
+    "eas": {
+      "projectId": "c90ee2a8-380e-4c5c-ab67-60769d5d1e64"
     }
+  },
+  "icon": "./assets/icon.png",
+  "ios": {
+    "buildNumber": "1.0.0",
+    "supportsTablet": true
+  },
+  "name": "ExTrack",
+  "orientation": "portrait",
+  "platforms": ["android", "ios"],
+  "privacy": "public",
+  "privacyPolicy": "https://jahbyte.com/extrack-privacy-policy",
+  "sdkVersion": "54.0.0",
+  "slug": "ExT",
+  "splash": {
+    "backgroundColor": "#ffffff",
+    "image": "./assets/splash.png",
+    "resizeMode": "contain"
+  },
+  "userInterfaceStyle": "light",
+  "version": "1.0.0",
+  "web": {
+    "favicon": "./assets/favicon.png"
   }
 }
