@@ -20,8 +20,6 @@
   "name": "ExTrack",
   "orientation": "portrait",
   "platforms": ["android", "ios"],
-  "privacy": "public",
-  "privacyPolicy": "https://jahbyte.com/extrack-privacy-policy",
   "sdkVersion": "54.0.0",
   "slug": "ExT",
   "splash": {
