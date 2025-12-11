@@ -71,7 +71,7 @@ function AddExpense({ navigation }) {
   const addHandler = async () => {
     setIsSubmitting(true);
 
-    data = {
+    const data = {
       title: titleInput,
       date: pickedDate,
       amount: amountInput,
@@ -79,7 +79,6 @@ function AddExpense({ navigation }) {
     };
 
     const res = await createExpense(data, token);
-
     if (res.status === "success") {
       navigation.navigate("Expenses");
       setSuccessMessage(res.message);

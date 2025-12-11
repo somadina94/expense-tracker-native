@@ -6,11 +6,13 @@ import Loading from "../UI/Loading";
 import { getAllExpenses } from "../../http/http";
 import { useSelector } from "react-redux";
 import { formatAmount } from "../../util/helpers";
+import { useIsFocused } from "@react-navigation/native";
 
 function Summary() {
   const [isSubmitting, setIsSubmitting] = useState(true);
   const [expenses, setExpenses] = useState([]);
   const token = useSelector((state) => state.auth.token);
+  const focused = useIsFocused();
 
   useEffect(() => {
     const fetchExpenses = async () => {
@@ -24,7 +26,7 @@ function Summary() {
       }
     };
     fetchExpenses();
-  }, [token, setIsSubmitting]);
+  }, [token, setIsSubmitting, focused]);
 
   const expensesAmounts = expenses.map((el) => el.amount);
 
